@@ -32,25 +32,20 @@ engine:                      # Engine settings.
     offer_draw_moves: 5      # How many moves in a row the absolute value of the score has to be below the draw value.
     offer_draw_pieces: 10    # Only if the pieces on board are less than or equal to this value, the bot offers/accepts draw.
   online_moves:
-    chessdb_book:
-      enabled: false
-      min_time: 20
-      move_quality: "good"   # One of "all", "good", "best".
-      min_depth: 20          # Only for move_quality: "best".
-      contribute: true
-    lichess_cloud_analysis:
-      enabled: true          # Activate online moves from Lichess cloud eval.
-      min_time: 20
-      move_quality: "best"   # One of "good", "best".
-      max_score_difference: 50 # Only for move_quality: "good". The maximum score difference (in cp) between the best move and the other moves.
-      min_depth: 20
-      min_knodes: 0
+    chessdb:
+      enabled: false                      # Activate online moves from https://chessdb.cn/queryc_en/
+      min_depth: 20                       # Minimum evaluation depth.
+      min_time: 40                        # Time the bot must have at least to use the online move.
+      timeout: 5                          # Time the server has to respond.
+    lichess_cloud:
+      enabled: true                       # Activate online moves from Lichess cloud eval.
+      min_depth: 20                       # Minimum evaluation depth.
+      min_time: 40                        # Time the bot must have at least to use the online move.
+      timeout: 5                          # Time the server has to respond.
     online_egtb:
-      enabled: true          # Activate online endgame tablebases from Lichess.
-      min_time: 20
-      max_pieces: 7
-      source: "lichess"      # One of "lichess", "chessdb".
-      move_quality: "best"   # One of "good", "best".
+      enabled: true                       # Activate online endgame tablebases from Lichess.
+      min_time: 20                        # Time the bot must have at least to use the online move.
+      timeout: 3                          # Time the server has to respond.
 # engine_options:            # Any custom command line params to pass to the engine.
 #   cpuct: 3.1
   homemade_options:
