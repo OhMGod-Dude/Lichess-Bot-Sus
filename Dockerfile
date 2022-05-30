@@ -1,5 +1,6 @@
 FROM ubuntu:jammy
 COPY . .
+COPY requirements.txt .
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y wget unzip python3 python3-pip
 
