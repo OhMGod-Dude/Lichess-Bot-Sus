@@ -1,4 +1,4 @@
-token: "lip_u8CvFaLgrNaLS4d2Yjzv"    # Lichess OAuth2 Token.
+token: "lip_aDj70IHEZv9FI49t4CKt"    # Lichess OAuth2 Token.
 url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
@@ -56,7 +56,7 @@ engine:                      # Engine settings.
   homemade_options:
 #   Hash: 256
   uci_options:               # Arbitrary UCI options passed to the engine.
-    Move Overhead: 500                    # Increase if your bot flags games too often.
+    Move Overhead: 1000                    # Increase if your bot flags games too often.
     Ponder: true
     Skill Level: 20
     Slow Mover: 80
