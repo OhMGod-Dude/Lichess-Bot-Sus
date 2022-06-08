@@ -39,7 +39,7 @@ engine:                      # engine settings
 #     syzygy: "Syzygy Path"
 # lczero:                    # lczero specific settings
 #   weights: "engines/latest.txt" # weights file path
-#   threads: 1               # max CPU threads the engine can use
+#   threads: 4               # max CPU threads the engine can use
 #   gpu: 0                   # which GPU to use
 #   tempdecay: 10            # After search is complete, the tempdecay can pick slightly weaker moves to offer variety. 10 is good tradeoff
 #   noise: true              # Randomness in the search algorithm. This makes sure that even unfavored lines are given a "lucky" shot
@@ -54,7 +54,7 @@ challenge:                   # incoming challenges
   sort_by: "best"            # possible values: "best", "first"
   accept_bot: false          # accepts challenges coming from other bots
   max_increment: 180         # maximum amount of increment to accaept a challenge. the max is 180. set to 0 for no increment
-  min_increment: 0           # minimum amount of increment to accept a challenge
+  min_increment: 1           # minimum amount of increment to accept a challenge
   variants:                  # chess variants to accept (http://lichess.org/variant)
     - standard
 #   - fromPosition
